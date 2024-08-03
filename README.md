@@ -2,7 +2,7 @@
 
 ### Project Overview
 
-This project presents an advanced implementation of a Service Queue Abstract Data Type (ADT), designed to efficiently manage a queue of "buzzers" as used in a restaurant setting without reservations. The core of the implementation lies in a hybrid data structure that synergistically combines linked lists, dynamically resizable arrays, and node indexing to achieve optimal performance.
+This project presents an advanced implementation of a Service Queue Abstract Data Type (ADT), designed to efficiently manage a queue of "buzzers" as used in a restaurant setting without reservations. The core of the implementation lies in a hybrid data structure that effectively combines linked lists, dynamically resizable arrays, and node indexing to achieve optimal performance.
 
 ### Features
 
