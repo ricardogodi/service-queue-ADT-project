@@ -39,13 +39,13 @@ make run
 This executes the service_queue program, which starts an interactive session where you can perform operations like issuing a buzzer, seating a buzzer, and removing a buzzer from the queue.
 
 
-###Clean the Build
+### Clean the Build
 ```bash
 make clean
 ```
 Removes all compiled object files and the executable to clean up the directory.
 
-###Source Files and Headers
+### Source Files and Headers
 
 - **driver.c**: Contains the main function and the interactive command loop.
 - **sq.c**: Implements the service queue operations as defined in sq.h.
