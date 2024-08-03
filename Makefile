@@ -1,14 +1,30 @@
-# modify this makefile for your implementation
-#   as described in the handout
+# Compiler and compiler flags
+CC = gcc
+CFLAGS = -g -Wall
 
-llist.o:  list.h llist.c
-	gcc -c llist.c
+# Build targets
+all: service_queue
 
-sq.o: llist.o sq.h sq.c
-	gcc -c sq.c
+# Link the program
+service_queue: driver.o sq.o llist.o
+	$(CC) $(CFLAGS) -o service_queue driver.o sq.o llist.o
 
-driver: driver.c sq.o
-	gcc driver.c sq.o llist.o -lc -o driver
+# Compile the driver source file
+driver.o: driver.c sq.h list.h
+	$(CC) $(CFLAGS) -c driver.c
 
+# Compile the service queue source file
+sq.o: sq.c sq.h list.h
+	$(CC) $(CFLAGS) -c sq.c
+
+# Compile the linked list source file
+llist.o: llist.c list.h
+	$(CC) $(CFLAGS) -c llist.c
+
+# Clean build files
 clean:
-	rm -f *.o driver
+	rm -f *.o service_queue
+
+# Run the program
+run: service_queue
+	./service_queue
